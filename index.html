@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pitted Olive Cafe Restaurant | Authentic Turkish Cuisine, King's Cross</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --green-deep: #2D5A3D;
+  --green-mid: #3A7D53;
+  --green-light: #5A9E72;
+  --green-pale: #D4E5D0;
+  --marble: #3B6B5A;
+  --cream: #F7F3ED;
+  --warm-white: #FDFBF7;
+  --wood: #6B4226;
+  --wood-light: #8B6342;
+  --dark: #1A1A1A;
+  --brown-dark: #2C1E14;
+  --gold: #C9A96E;
+  --sage: #8FAE82;
+  --sand: #E8DDD0;
+  --leaf: #4A7A3E;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark);
+  background: var(--warm-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: 'Caveat', cursive; }
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+nav.scrolled {
+  background: rgba(28, 42, 28, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  padding: 0.7rem 2.5rem;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.nav-logo {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cream);
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.nav-logo:hover { transform: scale(1.05); }
+.nav-logo span { color: var(--sage); }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-call {
+  background: var(--green-mid) !important;
+  color: var(--cream) !important;
+  padding: 0.5rem 1.2rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s !important;
+  box-shadow: 0 2px 15px rgba(58,125,83,0.3);
+}
+
+.nav-call:hover {
+  background: var(--green-light) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(58,125,83,0.4) !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--cream);
+  transition: all 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  background: #0a1a0f;
+}
+
+/* Animated mesh gradient */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(45,90,61,0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 20%, rgba(59,107,90,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(74,122,62,0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 70% 70%, rgba(107,66,38,0.4) 0%, transparent 60%);
+  animation: gradientShift 12s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% {
+    background: 
+      radial-gradient(ellipse 80% 60% at 20% 80%, rgba(45,90,61,0.7) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 20%, rgba(59,107,90,0.5) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 50% at 50% 50%, rgba(74,122,62,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 70% 70%, rgba(107,66,38,0.4) 0%, transparent 60%);
+  }
+  33% {
+    background: 
+      radial-gradient(ellipse 70% 70% at 30% 60%, rgba(59,107,90,0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 70% 40%, rgba(45,90,61,0.5) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 40% 30%, rgba(107,66,38,0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 60% 80%, rgba(74,122,62,0.5) 0%, transparent 60%);
+  }
+  66% {
+    background: 
+      radial-gradient(ellipse 60% 80% at 50% 70%, rgba(74,122,62,0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 50% at 20% 30%, rgba(45,90,61,0.4) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 60% at 80% 60%, rgba(59,107,90,0.5) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 30% 90%, rgba(107,66,38,0.3) 0%, transparent 60%);
+  }
+  100% {
+    background: 
+      radial-gradient(ellipse 80% 60% at 40% 90%, rgba(45,90,61,0.7) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 60% 10%, rgba(74,122,62,0.5) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 50% at 20% 40%, rgba(107,66,38,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 70%, rgba(59,107,90,0.5) 0%, transparent 60%);
+  }
+}
+
+/* Grain texture overlay */
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Floating particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% {
+    transform: translateY(-10vh) rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Floating botanical elements */
+.hero-botanicals {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.botanical {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.12;
+  animation: botanicalDrift 20s ease-in-out infinite;
+}
+
+.botanical:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; font-size: 2.5rem; }
+.botanical:nth-child(2) { top: 25%; right: 12%; animation-delay: -4s; font-size: 1.8rem; }
+.botanical:nth-child(3) { top: 60%; left: 15%; animation-delay: -8s; font-size: 2rem; }
+.botanical:nth-child(4) { top: 40%; right: 20%; animation-delay: -12s; font-size: 1.5rem; }
+.botanical:nth-child(5) { top: 75%; right: 8%; animation-delay: -16s; font-size: 2.2rem; }
+.botanical:nth-child(6) { top: 10%; left: 45%; animation-delay: -6s; font-size: 1.6rem; }
+
+@keyframes botanicalDrift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(15px, -20px) rotate(5deg); }
+  50% { transform: translate(-10px, 10px) rotate(-3deg); }
+  75% { transform: translate(20px, 15px) rotate(8deg); }
+}
+
+/* Glowing orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+  animation: orbPulse 8s ease-in-out infinite;
+}
+
+.hero-orb--1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(45,90,61,0.3);
+  bottom: -10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.hero-orb--2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(74,122,62,0.2);
+  top: 10%;
+  right: 5%;
+  animation-delay: -3s;
+}
+
+.hero-orb--3 {
+  width: 200px;
+  height: 200px;
+  background: rgba(107,66,38,0.15);
+  top: 50%;
+  left: 40%;
+  animation-delay: -6s;
+}
+
+@keyframes orbPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 0 4rem 5rem;
+  max-width: 750px;
+}
+
+/* Glass badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(143,174,130,0.4), transparent);
+}
+
+.hero-badge span {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero-badge .badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+/* Hero heading */
+.hero h1 {
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.hero-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-line--1 {
+  font-weight: 400;
+  font-size: 0.55em;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #fff 0%, var(--sage) 40%, var(--green-pale) 70%, #fff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards, shimmerText 6s ease-in-out infinite 1.5s;
+}
+
+.hero-line--2 {
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 4px 40px rgba(45,90,61,0.3);
+  animation-delay: 0.7s;
+}
+
+.hero-line--3 {
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.7em;
+  animation-delay: 0.9s;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerText {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Hero description */
+.hero-desc {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards;
+}
+
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards;
+}
+
+.btn-hero-primary {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--green-mid), var(--green-deep));
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(45,90,61,0.4);
+}
+
+.btn-hero-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--green-light), var(--green-mid));
+  opacity: 0;
+  transition: opacity 0.4s;
+  border-radius: 50px;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 35px rgba(45,90,61,0.5);
+}
+
+.btn-hero-primary:hover::before { opacity: 1; }
+
+.btn-hero-primary span { position: relative; z-index: 1; }
+
+.btn-hero-outline {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-hero-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(143,174,130,0.4);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2s forwards;
+}
+
+.scroll-indicator span {
+  color: rgba(255,255,255,0.3);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  writing-mode: vertical-rl;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 40%;
+  background: var(--sage);
+  animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0% { top: -40%; }
+  100% { top: 110%; }
+}
+
+/* ===== BOTANICAL STRIP ===== */
+.botanical-strip {
+  background: var(--green-deep);
+  padding: 1.8rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.botanical-strip p {
+  color: var(--green-pale);
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  padding: 6rem 2rem;
+  background: var(--warm-white);
+}
+
+.about-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image {
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--green-deep), var(--marble));
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(45,90,61,0.15);
+}
+
+.about-badge {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green-deep);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.about-text h2 span { color: var(--green-mid); }
+
+.about-text p {
+  color: #5a5a5a;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--green-pale);
+}
+
+.stat h3 { font-size: 2.5rem; color: var(--green-mid); }
+.stat p { font-size: 0.8rem; color: var(--wood); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ===== GALLERY ===== */
+.gallery {
+  padding: 4rem 2rem;
+  background: var(--cream);
+}
+
+.gallery-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
+
+.gallery-item:nth-child(1) { background: #2D5A3D; }
+.gallery-item:nth-child(2) { background: #6B4226; }
+.gallery-item:nth-child(3) { background: #4A7A3E; }
+.gallery-item:nth-child(4) { background: #2C1E14; }
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: var(--cream);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transform: translateY(100%);
+  transition: transform 0.4s;
+}
+
+.gallery-item:hover .gallery-label { transform: translateY(0); }
+
+/* ===== MENU ===== */
+.menu {
+  padding: 6rem 2rem;
+  background: var(--warm-white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 { font-size: 3.5rem; color: var(--dark); margin-bottom: 0.5rem; }
+.section-header p { color: var(--wood-light); font-size: 1rem; max-width: 500px; margin: 0 auto; }
+
+.section-header .divider {
+  width: 60px;
+  height: 3px;
+  background: var(--green-mid);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.menu-cat {
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--green-pale);
+  background: transparent;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--dark);
+  transition: all 0.3s;
+}
+
+.menu-cat:hover, .menu-cat.active {
+  background: var(--green-deep);
+  color: var(--cream);
+  border-color: var(--green-deep);
+}
+
+.menu-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.menu-item {
+  background: var(--cream);
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(45,90,61,0.06);
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(45,90,61,0.1);
+}
+
+.menu-item h4 { font-size: 1.4rem; color: var(--dark); margin-bottom: 0.3rem; }
+
+.dish-tag {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6rem;
+  background: var(--green-pale);
+  color: var(--green-deep);
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.menu-item p { font-size: 0.85rem; color: #8a8a8a; line-height: 1.5; }
+
+.menu-price {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: var(--green-mid);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+  padding: 6rem 2rem;
+  background: var(--brown-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(45,90,61,0.12);
+  filter: blur(60px);
+}
+
+.reviews .section-header h2 { color: var(--cream); }
+.reviews .section-header p { color: var(--sage); }
+
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.google-badge .stars { color: var(--gold); font-size: 1.2rem; }
+.google-badge .rating { color: var(--cream); font-weight: 600; font-size: 1.1rem; }
+.google-badge .count { color: var(--sage); font-size: 0.85rem; }
+
+.reviews-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(143,174,130,0.15);
+}
+
+.review-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 2px; }
+
+.review-card blockquote {
+  color: var(--sand);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.reviewer { display: flex; align-items: center; gap: 0.8rem; }
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--green-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.reviewer-info p { color: var(--cream); font-weight: 500; font-size: 0.9rem; }
+.reviewer-info span { color: var(--sage); font-size: 0.75rem; }
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: 6rem 2rem;
+  background: var(--warm-white);
+}
+
+.contact-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info h2 { font-size: 3rem; margin-bottom: 1.5rem; color: var(--dark); }
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--green-pale);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.contact-detail:hover .contact-icon { transform: scale(1.1); }
+
+.contact-detail h4 { font-size: 1.3rem; color: var(--dark); margin-bottom: 0.2rem; }
+.contact-detail p { color: #8a7a6a; font-size: 0.9rem; }
+
+.contact-detail a {
+  color: var(--green-mid);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contact-detail a:hover { color: var(--green-deep); }
+
+.contact-form {
+  background: var(--cream);
+  padding: 2.5rem;
+  border-radius: 24px;
+  border: 1px solid rgba(45,90,61,0.08);
+}
+
+.contact-form h3 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--dark); }
+.form-group { margin-bottom: 1rem; }
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border: 2px solid var(--green-pale);
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  background: var(--warm-white);
+  color: var(--dark);
+  transition: all 0.3s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 4px rgba(58,125,83,0.08);
+}
+
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #b0a090; }
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  color: var(--cream);
+  border: none;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: 0 4px 15px rgba(45,90,61,0.25);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45,90,61,0.35);
+}
+
+/* ===== MAP ===== */
+.map-section { height: 350px; background: var(--sand); }
+.map-section iframe { width: 100%; height: 100%; border: none; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--brown-dark);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-logo { font-family: 'Caveat', cursive; font-size: 2rem; color: var(--cream); margin-bottom: 1rem; }
+.footer-logo span { color: var(--sage); }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--sage);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--green-pale); }
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.social-link:hover {
+  background: var(--green-mid);
+  transform: translateY(-3px);
+}
+
+.footer-copy { color: rgba(255,255,255,0.25); font-size: 0.8rem; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(28,42,28,0.98);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  .hero { align-items: flex-end; }
+  .hero-content { padding: 0 2rem 4rem; }
+  .hero h1 { font-size: 3.5rem; }
+  .scroll-indicator { display: none; }
+
+  .about-grid,
+  .menu-grid,
+  .reviews-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid { gap: 2rem; }
+  .about-image { aspect-ratio: 16/9; }
+  .about-stats { gap: 1.5rem; }
+  .stat h3 { font-size: 2rem; }
+}
+
+/* ===== CURSOR FOLLOWER ===== */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green-mid);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.15s cubic-bezier(0.25, 0.1, 0.25, 1), width 0.3s, height 0.3s, background 0.3s;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.cursor-dot.visible { opacity: 0.6; }
+
+.cursor-dot.hovering {
+  width: 40px;
+  height: 40px;
+  opacity: 0.15;
+  background: var(--sage);
+}
+
+@media (max-width: 768px) { .cursor-dot { display: none; } }
+
+/* ===== ABOUT IMAGE REVEAL ===== */
+.about-image {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-image.revealed {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ===== STAT COUNTERS ===== */
+.stat {
+  position: relative;
+}
+
+.stat h3 {
+  transition: color 0.6s;
+}
+
+.stat::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green-mid);
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat.counted::after {
+  width: 100%;
+}
+
+/* ===== GALLERY 3D TILT ===== */
+.gallery-item {
+  transform-style: preserve-3d;
+  perspective: 800px;
+  transition: transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99), box-shadow 0.5s;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ===== MENU ITEM ACCENT ===== */
+.menu-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--green-mid), var(--green-light));
+  border-radius: 0 3px 3px 0;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-item:hover::before {
+  height: 60%;
+}
+
+.menu-item:hover {
+  padding-left: 1.8rem;
+}
+
+/* Menu price float animation */
+.menu-price {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-item:hover .menu-price {
+  transform: scale(1.1);
+}
+
+/* ===== REVIEW CARDS 3D ===== */
+.review-card {
+  transform-style: preserve-3d;
+  perspective: 600px;
+  position: relative;
+}
+
+.review-card::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: 'Caveat', cursive;
+  font-size: 4rem;
+  color: rgba(143,174,130,0);
+  line-height: 1;
+  transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s;
+  transform: translateY(10px);
+}
+
+.review-card:hover::before {
+  color: rgba(143,174,130,0.2);
+  transform: translateY(0);
+}
+
+/* Stars stagger animation */
+.review-card.visible .review-stars {
+  animation: starsReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes starsReveal {
+  from { letter-spacing: 12px; opacity: 0; }
+  to { letter-spacing: 2px; opacity: 1; }
+}
+
+/* ===== CONTACT ICONS ===== */
+.contact-icon {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s;
+}
+
+.contact-detail:hover .contact-icon {
+  transform: scale(1.1) rotate(-8deg);
+  background: var(--green-mid);
+}
+
+.contact-detail:hover .contact-icon + div h4 {
+  color: var(--green-mid);
+}
+
+.contact-detail h4 {
+  transition: color 0.3s;
+}
+
+/* ===== FORM INPUTS REFINED ===== */
+.form-group {
+  position: relative;
+}
+
+.form-group::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--green-mid);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+
+.form-group:focus-within::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Submit button ripple */
+.btn-submit {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-submit .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: scale(0);
+  animation: rippleEffect 0.6s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ===== FOOTER LINKS ===== */
+.footer-links a {
+  position: relative;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--sage);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* Social link spin */
+.social-link:hover {
+  transform: translateY(-3px) rotate(10deg);
+}
+
+/* ===== DIVIDER ANIMATION ===== */
+.divider {
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 0;
+}
+
+.divider.visible {
+  width: 60px;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR FOLLOWER -->
+<div class="cursor-dot" id="cursor-dot"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Pitted <span>Olive</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:07507307482" class="nav-call">📞 Call Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- Animated gradient bg -->
+  <div class="hero-gradient"></div>
+
+  <!-- Glowing orbs -->
+  <div class="hero-orb hero-orb--1"></div>
+  <div class="hero-orb hero-orb--2"></div>
+  <div class="hero-orb hero-orb--3"></div>
+
+  <!-- Grain overlay -->
+  <div class="hero-grain"></div>
+
+  <!-- Floating botanicals -->
+  <div class="hero-botanicals">
+    <div class="botanical">🌿</div>
+    <div class="botanical">🫒</div>
+    <div class="botanical">🍃</div>
+    <div class="botanical">🌱</div>
+    <div class="botanical">🫒</div>
+    <div class="botanical">🍃</div>
+  </div>
+
+  <!-- Particles -->
+  <div class="hero-particles" id="particles"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      <span>Authentic Cafe & Deli · King's Cross</span>
+    </div>
+
+    <h1>
+      <span class="hero-line hero-line--1">Handmade Turkish</span>
+      <span class="hero-line hero-line--2">Pitted Olive</span>
+      <span class="hero-line hero-line--3">Cafe & Restaurant</span>
+    </h1>
+
+    <p class="hero-desc">
+      Fresh Mediterranean dishes, family recipes, handmade daily on Leigh Street. Where the locals eat.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#menu" class="btn-hero-primary"><span>View Our Menu</span></a>
+      <a href="tel:07507307482" class="btn-hero-outline">📞 07507 307482</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- BOTANICAL STRIP -->
+<div class="botanical-strip">
+  <p>Fresh ingredients · Family recipes · Made with love every single day</p>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-grid">
+    <div class="about-image">
+      <img src="storefront.png" alt="Pitted Olive Cafe storefront" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="about-text fade-in-right">
+      <span class="about-badge">Our Story</span>
+      <h2>A little corner of <span>Turkey</span> in King's Cross</h2>
+      <p>The Pitted Olive is more than a restaurant — it's a gathering place. Tucked away on Leigh Street, just two minutes from King's Cross, we've built a space where homemade food, hanging greenery, and warm conversation come together.</p>
+      <p>Every dish is prepared fresh by hand using recipes passed through our family. From our signature gözleme to our loaded meze bowls, we believe the best food is simple food done with care and generosity.</p>
+      <div class="about-stats">
+        <div class="stat"><h3>4.8 ★</h3><p>Google Rating</p></div>
+        <div class="stat"><h3>1,100+</h3><p>Reviews</p></div>
+        <div class="stat"><h3>♡</h3><p>Family Run</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="storefront.png" alt="Our Café" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);">
+      <div class="gallery-label">Our Café</div>
+    </div>
+    <div class="gallery-item">
+      <img src="food-bowls.png" alt="Fresh Bowls" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);">
+      <div class="gallery-label">Fresh Bowls</div>
+    </div>
+    <div class="gallery-item">
+      <img src="kitchen.png" alt="Handmade Daily" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);">
+      <div class="gallery-label">Handmade Daily</div>
+    </div>
+    <div class="gallery-item">
+      <img src="interior.png" alt="Our Space" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);">
+      <div class="gallery-label">Our Space</div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+  <div class="section-header fade-in">
+    <h2>Our Menu</h2>
+    <div class="divider"></div>
+    <p>Authentic Turkish & Mediterranean dishes, made fresh every day</p>
+  </div>
+  <div class="menu-categories">
+    <button class="menu-cat active">Meze & Starters</button>
+    <button class="menu-cat">Gözleme & Pide</button>
+    <button class="menu-cat">Grills</button>
+    <button class="menu-cat">Bowls</button>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-item fade-in"><div><span class="dish-tag">Popular</span><h4>Hummus Bowl</h4><p>Creamy homemade hummus with olive oil, paprika & warm flatbread</p></div><span class="menu-price">£6.50</span></div>
+    <div class="menu-item fade-in"><div><h4>Halloumi & Fig</h4><p>Grilled halloumi with fresh fig, honey & mint</p></div><span class="menu-price">£8.00</span></div>
+    <div class="menu-item fade-in"><div><span class="dish-tag">Signature</span><h4>Spinach Gözleme</h4><p>Hand-rolled flatbread with spinach, feta & caramelised onion</p></div><span class="menu-price">£9.50</span></div>
+    <div class="menu-item fade-in"><div><h4>Mixed Meze Plate</h4><p>Chef's daily selection — hummus, babaganoush, ezme, dolma & bread</p></div><span class="menu-price">£13.00</span></div>
+    <div class="menu-item fade-in"><div><span class="dish-tag">Popular</span><h4>Loaded Falafel Bowl</h4><p>Crispy falafel, tabbouleh, pickles, hummus & tahini dressing</p></div><span class="menu-price">£11.00</span></div>
+    <div class="menu-item fade-in"><div><h4>Adana Kebab</h4><p>Charcoal-grilled minced lamb with Turkish spices, rice & salad</p></div><span class="menu-price">£14.50</span></div>
+    <div class="menu-item fade-in"><div><h4>Chicken Shish</h4><p>Marinated chicken breast skewers with bulgur & grilled vegetables</p></div><span class="menu-price">£13.00</span></div>
+    <div class="menu-item fade-in"><div><span class="dish-tag">Vegan</span><h4>Aubergine Moussaka</h4><p>Layers of roasted aubergine, tomato, chickpeas & herbed rice</p></div><span class="menu-price">£12.00</span></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="section-header fade-in">
+    <div class="google-badge">
+      <span class="stars">★★★★★</span>
+      <span class="rating">4.8</span>
+      <span class="count">1,123 Google reviews</span>
+    </div>
+    <h2>What Our Guests Say</h2>
+    <div class="divider" style="background: var(--green-mid);"></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-in">
+      <div class="review-stars">★ ★ ★ ★ ★</div>
+      <blockquote>"The gözleme here is hands down the best I've had outside of Istanbul. Generous portions, incredibly fresh, and the staff make you feel like family."</blockquote>
+      <div class="reviewer"><div class="reviewer-avatar">S</div><div class="reviewer-info"><p>Sarah M.</p><span>3 weeks ago</span></div></div>
+    </div>
+    <div class="review-card fade-in">
+      <div class="review-stars">★ ★ ★ ★ ★</div>
+      <blockquote>"Hidden gem near King's Cross! The meze bowls are unreal — packed with flavour. Beautiful little space with all the hanging plants. Will be back weekly."</blockquote>
+      <div class="reviewer"><div class="reviewer-avatar">J</div><div class="reviewer-info"><p>James T.</p><span>1 month ago</span></div></div>
+    </div>
+    <div class="review-card fade-in">
+      <div class="review-stars">★ ★ ★ ★ ★</div>
+      <blockquote>"We come here every week. The food is always fresh, the börek is phenomenal, and the prices are so reasonable for the area. Absolute favourite."</blockquote>
+      <div class="reviewer"><div class="reviewer-avatar">A</div><div class="reviewer-info"><p>Ayesha K.</p><span>2 weeks ago</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-grid">
+    <div class="contact-info fade-in-left">
+      <h2>Come Find Us</h2>
+      <div class="contact-detail"><div class="contact-icon">📍</div><div><h4>Our Location</h4><p>3 Leigh St, London WC1H 9EW</p><p>2 minutes from King's Cross Station</p></div></div>
+      <div class="contact-detail"><div class="contact-icon">📞</div><div><h4>Call or Text</h4><a href="tel:07507307482">07507 307482</a></div></div>
+      <div class="contact-detail"><div class="contact-icon">🕐</div><div><h4>Opening Hours</h4><p>Monday – Saturday: 9am – 10pm</p><p>Sunday: 10am – 9pm</p></div></div>
+      <div class="contact-detail"><div class="contact-icon">📸</div><div><h4>Follow Us</h4><a href="https://instagram.com" target="_blank">@pittedolivecafe on Instagram</a></div></div>
+    </div>
+    <div class="contact-form fade-in-right">
+      <h3>Get in Touch</h3>
+      <div class="form-group"><input type="text" name="name" placeholder="Your name" required></div>
+      <div class="form-group"><input type="email" name="email" placeholder="Your email" required></div>
+      <div class="form-group"><input type="tel" name="phone" placeholder="Your phone number"></div>
+      <div class="form-group"><textarea name="message" placeholder="Bookings, enquiries, catering — we'd love to hear from you" required></textarea></div>
+      <button type="submit" class="btn-submit">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-section">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.1!2d-0.1235!3d51.5265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMxJzM1LjQiTiAwwrAwNycyNC42Ilc!5e0!3m2!1sen!2suk!4v1" loading="lazy"></iframe>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Pitted <span>Olive</span></div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://instagram.com" class="social-link" target="_blank">📸</a>
+    <a href="tel:07507307482" class="social-link">📞</a>
+  </div>
+  <p class="footer-copy">© 2026 Pitted Olive Cafe Restaurant. All rights reserved.</p>
+</footer>
+
+<script>
+// ===== CURSOR FOLLOWER =====
+const cursorDot = document.getElementById('cursor-dot');
+let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursorDot.classList.add('visible');
+});
+
+document.addEventListener('mouseleave', () => cursorDot.classList.remove('visible'));
+
+// Smooth follow
+function animateCursor() {
+  dotX += (mouseX - dotX) * 0.15;
+  dotY += (mouseY - dotY) * 0.15;
+  cursorDot.style.left = dotX + 'px';
+  cursorDot.style.top = dotY + 'px';
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Expand cursor on interactive elements
+document.querySelectorAll('a, button, .menu-item, .review-card, .gallery-item').forEach(el => {
+  el.addEventListener('mouseenter', () => cursorDot.classList.add('hovering'));
+  el.addEventListener('mouseleave', () => cursorDot.classList.remove('hovering'));
+});
+
+// ===== STICKY NAV =====
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ===== PARTICLES =====
+const particleContainer = document.getElementById('particles');
+function createParticle() {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  const size = Math.random() * 4 + 1;
+  const colors = ['rgba(143,174,130,0.5)', 'rgba(90,158,114,0.4)', 'rgba(212,229,208,0.3)', 'rgba(201,169,110,0.3)'];
+  p.style.cssText = `
+    width: ${size}px; height: ${size}px;
+    left: ${Math.random() * 100}%;
+    background: ${colors[Math.floor(Math.random() * colors.length)]};
+    animation-duration: ${Math.random() * 15 + 10}s;
+    animation-delay: ${Math.random() * 10}s;
+  `;
+  particleContainer.appendChild(p);
+  setTimeout(() => p.remove(), 25000);
+}
+
+setInterval(createParticle, 800);
+for (let i = 0; i < 15; i++) setTimeout(createParticle, i * 200);
+
+// ===== SCROLL REVEAL (staggered, directional) =====
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const delay = el.dataset.delay || 0;
+      setTimeout(() => el.classList.add('visible'), delay);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach((el, i) => {
+  el.dataset.delay = (i % 4) * 120;
+  revealObserver.observe(el);
+});
+
+// ===== ABOUT IMAGE CLIP REVEAL =====
+const aboutImg = document.querySelector('.about-image');
+const aboutObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('revealed'), 200);
+    }
+  });
+}, { threshold: 0.2 });
+if (aboutImg) aboutObserver.observe(aboutImg);
+
+// ===== DIVIDER ANIMATION =====
+document.querySelectorAll('.divider').forEach(div => {
+  const divObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.5 });
+  divObs.observe(div);
+});
+
+// ===== STAT COUNTER ANIMATION =====
+function animateCounter(el, target, suffix = '') {
+  let current = 0;
+  const increment = target / 40;
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+      el.closest('.stat').classList.add('counted');
+    }
+    if (Number.isInteger(target)) {
+      el.textContent = Math.floor(current).toLocaleString() + suffix;
+    } else {
+      el.textContent = current.toFixed(1) + suffix;
+    }
+  }, 30);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.counted) {
+      entry.target.dataset.counted = 'true';
+      const statEls = entry.target.querySelectorAll('.stat h3');
+      statEls.forEach((el, i) => {
+        setTimeout(() => {
+          const text = el.textContent.trim();
+          if (text.includes('4.8')) animateCounter(el, 4.8, ' ★');
+          else if (text.includes('1,100')) animateCounter(el, 1100, '+');
+          else el.style.transform = 'scale(1.2)';
+        }, i * 200);
+      });
+    }
+  });
+}, { threshold: 0.5 });
+
+const statsContainer = document.querySelector('.about-stats');
+if (statsContainer) statsObserver.observe(statsContainer);
+
+// ===== 3D TILT ON GALLERY & REVIEW CARDS =====
+function addTiltEffect(elements, intensity = 10) {
+  elements.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      el.style.transform = `perspective(600px) rotateY(${x * intensity}deg) rotateX(${-y * intensity}deg) scale(1.02)`;
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = 'perspective(600px) rotateY(0) rotateX(0) scale(1)';
+      el.style.transition = 'transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99)';
+    });
+    
+    el.addEventListener('mouseenter', () => {
+      el.style.transition = 'transform 0.1s';
+    });
+  });
+}
+
+addTiltEffect(document.querySelectorAll('.gallery-item'), 8);
+addTiltEffect(document.querySelectorAll('.review-card'), 6);
+
+// ===== REVIEW CARD STARS ANIMATION =====
+const reviewObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.review-card').forEach(card => reviewObserver.observe(card));
+
+// ===== SUBMIT BUTTON RIPPLE =====
+document.querySelector('.btn-submit').addEventListener('click', function(e) {
+  const ripple = document.createElement('span');
+  ripple.className = 'ripple';
+  const rect = this.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
+  ripple.style.width = ripple.style.height = size + 'px';
+  ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+  ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+  this.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 600);
+});
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelector('.nav-links').classList.remove('open');
+    }
+  });
+});
+
+// ===== MENU TABS =====
+document.querySelectorAll('.menu-cat').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.menu-cat').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// ===== HERO PARALLAX =====
+document.querySelector('.hero').addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 2;
+  const y = (e.clientY / window.innerHeight - 0.5) * 2;
+  
+  document.querySelectorAll('.hero-orb').forEach((orb, i) => {
+    const speed = (i + 1) * 8;
+    orb.style.transform = `translate(${x * speed}px, ${y * speed}px) scale(${1 + Math.sin(Date.now() / 2000) * 0.15})`;
+  });
+  
+  document.querySelectorAll('.botanical').forEach((b, i) => {
+    const speed = (i + 1) * 3;
+    b.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+  });
+});
+</script>
+
+</body>
+</html>
