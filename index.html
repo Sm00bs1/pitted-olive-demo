@@ -63,16 +63,34 @@ nav.scrolled {
 }
 
 .nav-logo {
-  font-family: 'Caveat', cursive;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--cream);
+  display: flex;
+  align-items: center;
   text-decoration: none;
   transition: transform 0.3s;
 }
 
 .nav-logo:hover { transform: scale(1.05); }
-.nav-logo span { color: var(--sage); }
+
+.nav-logo img {
+  height: 52px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+  transition: filter 0.3s;
+}
+
+nav.scrolled .nav-logo img {
+  height: 42px;
+}
+
+.nav-logo-text {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cream);
+  display: none;
+}
+
+.nav-logo-text span { color: var(--sage); }
 
 .nav-links {
   display: flex;
@@ -133,11 +151,46 @@ nav.scrolled {
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
-  display: flex;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: relative;
   overflow: hidden;
   background: #0a1a0f;
+}
+
+.hero-image-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.75;
+  transform: scale(1.05);
+  animation: heroImgReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+@keyframes heroImgReveal {
+  to { transform: scale(1); opacity: 0.85; }
+}
+
+.hero-image-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0a1a0f 0%, transparent 30%),
+              linear-gradient(to top, rgba(10,26,15,0.6) 0%, transparent 40%);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-image-panel { display: none; }
 }
 
 /* Animated mesh gradient */
@@ -297,8 +350,25 @@ nav.scrolled {
 .hero-content {
   position: relative;
   z-index: 10;
-  padding: 0 4rem 5rem;
-  max-width: 750px;
+  padding: 9rem 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5));
+}
+
+@media (max-width: 768px) {
+  .hero-content { padding: 8rem 2rem 4rem; }
+  .hero-logo { width: 140px; }
 }
 
 /* Glass badge */
@@ -1332,7 +1402,10 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Pitted <span>Olive</span></a>
+  <a href="#" class="nav-logo">
+    <img src="logo.png" alt="Pitted Olive" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="nav-logo-text">Pitted <span>Olive</span></span>
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#menu">Menu</a></li>
@@ -1373,6 +1446,7 @@ footer {
 
   <!-- Content -->
   <div class="hero-content">
+    <img src="logo.png" alt="Pitted Olive" class="hero-logo">
     <div class="hero-badge">
       <div class="badge-dot"></div>
       <span>Authentic Cafe & Deli · King's Cross</span>
@@ -1392,6 +1466,11 @@ footer {
       <a href="#menu" class="btn-hero-primary"><span>View Our Menu</span></a>
       <a href="tel:07507307482" class="btn-hero-outline">📞 07507 307482</a>
     </div>
+  </div>
+
+  <!-- Hero image panel -->
+  <div class="hero-image-panel">
+    <img src="interior.png" alt="Pitted Olive interior">
   </div>
 
   <!-- Scroll indicator -->
